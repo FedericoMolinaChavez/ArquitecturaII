@@ -26,6 +26,9 @@ architecture CA_arch of CA is
         sal <= "0110"
       elsif (op = "000101") then --bne
         sal <= "0110"
+      elsif (op = "000011") then --jal
+        sal<= "1000";
+      
       
         
       end if;
