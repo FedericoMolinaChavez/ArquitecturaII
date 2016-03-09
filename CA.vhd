@@ -13,16 +13,20 @@ architecture CA_arch of CA is
       if (op = "000000") then --Si es tipo R
         if (funct = "100000") then --suma
           sal <= "0010";
-        elseif (funct = "100010") then --resta
+        elsif (funct = "100010") then --resta
           sal <= "0110";
-        elseif (funct = "011010") then --division
-          sal <= "0111";
+        elsif (funct = "011010") then --division
+          sal <= "1110";
+        elsif (funct = "101010") then --set less than
+          sal<= "0111";
         end if;
       elsif (op = "001000") then --addi
         sal <= "0010";
       elsif (op = "000100") then --beq
         sal <= "0110"
-      elsif
+      elsif (op = "000101") then --bne
+        sal <= "0110"
+      
         
       end if;
     end process;
