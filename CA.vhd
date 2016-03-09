@@ -19,6 +19,10 @@ architecture CA_arch of CA is
           sal <= "1110";
         elsif (funct = "101010") then --set less than
           sal<= "0111";
+        elsif (funct= "010000") then --mflo
+          sal <= "1111";
+        elsif (funct = "010010") then --mfhi
+          sal <= "0000"
         end if;
       elsif (op = "001000") then --addi
         sal <= "0010";
@@ -28,6 +32,7 @@ architecture CA_arch of CA is
         sal <= "0110"
       elsif (op = "000011") then --jal
         sal<= "1000";
+
       
       
         
