@@ -11,13 +11,11 @@ architecture MUXJ_arch of MUXJ is
 	process (jump)
 	begin
 	if (jump = "00") then
-	sal <= ent1;
-	end if;
-	ifelse (jump = "01")then
-	sal<= ent2;
-	end if;
-	ifelse (jump = "10")then
-	sal<= ent3;
+		sal <= ent1;
+	elseif (jump = "01")then
+		sal<= ent2;
+	elseif (jump = "10")then
+		sal<= ent3;
 	end if;
 	end process
 end MUXJ_arch
