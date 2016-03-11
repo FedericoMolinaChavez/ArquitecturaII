@@ -10,12 +10,8 @@ entity MUXJ is
 architecture MUXJ_arch of MUXJ is
 	process (jump)
 	begin
-	if (jump = "00") then
-		sal <= ent1;
-	elsif (jump = "01")then
-		sal<= ent2;
-	elsif (jump = "10")then
-		sal<= ent3;
-	end if;
+	sal<=ent1 when jump="00"else
+	sal<=ent2 when jump="01"else
+	sal<=ent3;
 	end process
 end MUXJ_arch

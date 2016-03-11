@@ -10,10 +10,7 @@ end MUXA
 architecture MUXA_arch of MUXA is
   process(AluSrc) 
     begin
-    if (AluSrc = "1") then
-      sal <= ent2;
-    else then
-      sal <= ent1;
-    end if;
+    sal<=ent2 when AluSrc="1"else
+    sal<=ent1;
     end process;
 end MUXA_arch;

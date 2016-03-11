@@ -9,10 +9,7 @@ end MUXmem;
 
 architecture MUXmem_arch of MUXmem is
   process(MemReg) is
-    if (MemReg = "1") then
-      sal <= ent2;
-    else then
-      sal <= ent1;
-    end if;
+    sal<=ent2 when MemRew = "1"else
+    sal<=ent1;
   end process;
 end MUXmem_arch;
