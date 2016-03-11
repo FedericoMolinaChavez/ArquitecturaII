@@ -10,10 +10,7 @@ end MUXrf;
 architecture MUXrf_arch of MUXrf is
 process (RegDst)
 	begin
-		if (RegDst = "1") then
-			sal <= ent2;
-		else then
-			sal <= ent1;
-		end if;
+		sal<=ent2 when RegDst = "1"else
+		sal<=ent1;
 	end process;
 end MUXrf_arch;
