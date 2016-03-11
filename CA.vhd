@@ -11,28 +11,19 @@ architecture CA_arch of CA is
   process(op,funct) 
     begin
       if (op = "000000") then --Si es tipo R
-        if (funct = "100000") then --suma
-          sal <= "0010";
-        elsif (funct = "100010") then --resta
-          sal <= "0110";
-        elsif (funct = "011010") then --division
-          sal <= "1110";
-        elsif (funct = "101010") then --set less than
-          sal<= "0111";
-        elsif (funct= "010000") then --mflo
-          sal <= "1111";
-        elsif (funct = "010010") then --mfhi
-          sal <= "0000"
-        end if;
-      elsif (op = "001000") then --addi
-        sal <= "0010";
-      elsif (op = "000100") then --beq
-        sal <= "0110"
-      elsif (op = "000101") then --bne
-        sal <= "0110"
-      elsif (op = "000011") then --jal
-        sal<= "1000";
-
+        sal<="0010" when funct="100000"else
+        sal<="0110" when funct="100010"else
+        sal<="1110" when funct="011010"else
+        sal<="0111" when funct="101010"else
+        sal<="1111" when funct="010000"else
+        sal<="0000";
+        
+      else then
+        sal<="0010" when op="001000"else --addi
+        sal<="0110" when op="000100"else --beq
+        sal<="0110" when op="000101"else --bne
+        sal<="1000" when op="000011"else --jal
+      endif;
       
       
         
