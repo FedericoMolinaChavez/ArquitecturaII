@@ -1,3 +1,6 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity registerFile is
 	port(
 	rs: in STD_LOGIC_VECTOR (4 downto 0);

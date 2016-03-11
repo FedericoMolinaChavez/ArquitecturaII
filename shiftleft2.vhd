@@ -1,4 +1,6 @@
 ieee.numeric_std
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
 entity shiftleft2 is
 	port(

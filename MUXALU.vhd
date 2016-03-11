@@ -1,3 +1,6 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity MUXA is
   port(
     ent1: in STD_LOGIC_VECTOR (31 downto 0);

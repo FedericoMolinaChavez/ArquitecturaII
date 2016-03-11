@@ -1,3 +1,6 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity CA is
   port(
   op: in STD_LOGIC_VECTOR (5 downto 0);

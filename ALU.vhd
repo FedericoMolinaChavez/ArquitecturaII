@@ -1,3 +1,7 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+ieee.numeric_std
+
 entity ALU is
 	port(
 	ALUop: in STD_LOGIC_VECTOR (2 downto 0);
