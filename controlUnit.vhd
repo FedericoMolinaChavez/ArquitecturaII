@@ -8,13 +8,14 @@ entity controlUnit is
 end controlUnit;
 
 architecture CU_arch of controlUnit is
-	process (op)
-	begin
-			datapath <= "0001000110000" when op="000000"else --tipo R
-			datapath <= "0010001110000" when op="001000"else --addi
-			datapath <= "0011000000110" when op="000100"else --beq
-			datapath <= "0011000000010" when op="000101"else --bne
-			datapath <= "0010000110100" when op="000011"else --jal
+begin
+	process (op) begin
+			datapath <= "0001000110000" when (op="000000") else --tipo R
+			datapath <= "0010001110000" when (op="001000") else --addi
+			datapath <= "0011000000110" when (op="000100") else --beq
+			datapath <= "0011000000010" when (op="000101") else --bne
+			datapath <= "0010000110100" when (op="000011") else --jal
+			datapath <= "0000000000000";
 	end process;
 
-end CU_arch
+end CU_arch;

@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-ieee.numeric_std
+use ieee.numeric_std;
 
 entity ALU is
 	port(
@@ -8,11 +8,11 @@ entity ALU is
 	entA: in STD_LOGIC_VECTOR (31 downto 0);
 	entB: in STD_LOGIC_VECTOR (31 downto 0);
 	resl: out STD_LOGIC_VECTOR (31 downto 0);
-	zero: out std_logic;
-	);
+	zero: out std_logic);
 end ALU;
 
 architecture ALU_arch of ALU is
+begin
 	process (ALUop,entA,entB,res1)
 	begin
 
@@ -20,6 +20,6 @@ architecture ALU_arch of ALU is
 		res1<=std_logic_vector(unsigned(entA) - unsigned(entB)) when Aluop="0110"else --resta
 
 		
-	end process
+	end process;
 
-end ALU_arch
+end ALU_arch;

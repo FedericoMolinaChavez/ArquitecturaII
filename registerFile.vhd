@@ -13,5 +13,6 @@ entity registerFile is
 end registerFile;
 
 architecture registerFile_arch of registerFile is
+begin
 
-end registerFile_arch
+end registerFile_arch;

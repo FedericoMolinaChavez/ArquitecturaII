@@ -8,9 +8,7 @@ entity MUXrf is
 end MUXrf;
 
 architecture MUXrf_arch of MUXrf is
-process (RegDst)
-	begin
+begin
 		sal<=ent2 when RegDst = "1"else
-		sal<=ent1;
-	end process;
+		ent1;
 end MUXrf_arch;

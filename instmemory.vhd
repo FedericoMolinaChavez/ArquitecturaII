@@ -8,5 +8,6 @@ entity instmemory is
 end instmemory;
 
 architecture instmemory_arch of instmemory is
+begin
 
-end instmemory_arch
+end instmemory_arch;

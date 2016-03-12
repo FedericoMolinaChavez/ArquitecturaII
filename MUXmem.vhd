@@ -8,8 +8,7 @@ entity MUXmem is
 end MUXmem;
 
 architecture MUXmem_arch of MUXmem is
-  process(MemReg) is
-    sal<=ent2 when MemRew = "1"else
-    sal<=ent1;
-  end process;
+begin
+    sal<=ent2 when (MemRew = "1")else
+    ent1;
 end MUXmem_arch;

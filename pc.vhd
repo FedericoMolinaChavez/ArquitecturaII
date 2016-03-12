@@ -9,13 +9,13 @@ entity pc is
 end pc;
 
 architecture pc_arch of pc is
-process(clk)
 begin
-
-if (rising_edge(clk)) then
-sal <= ent;
-end if;
-
+	process(clk)	
+	begin
+	if (rising_edge(clk)) then
+		sal <= ent;
+	else
+	sal <= "00000000000000000000000000000000";
+	end if;
 end process;
-
 end pc_arch;
