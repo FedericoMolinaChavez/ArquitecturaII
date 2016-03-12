@@ -9,7 +9,7 @@ end MUXaddpc;
 
 architecture MUXaddpc_arch of MUXaddpc is
     begin
-      case EwalB is
+      case ReslB is
         when "1" => sal<=ent1;
         when "0" => sal<=ent2;
         when others => sal<=ent1;
