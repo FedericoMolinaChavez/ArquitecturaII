@@ -12,12 +12,16 @@ entity MUXJ is
 end MUXJ;
 
 architecture MUXJ_arch of MUXJ is
+signal sal_dummy: STD_LOGIC_VECTOR (31 downto 0);
 begin
-	process (jump)
+	sal<=sal_dummy;
+	process (jump,sal_dummy,ent1,ent2,ent3)
 	begin
-	
-	sal<=ent1 when (jump="00")else
-	ent2 when (jump="01")else
-	ent3;
+		case jump is
+			when "00" => sal_dummy<=ent1;
+			when "01" => sal_dummy<=ent2;
+			when "10" => sal_dummy<=ent3;
+			when others => sal_dummy<="00000000000000000000000000000000";
+		end case;
 	end process;
 end MUXJ_arch;
