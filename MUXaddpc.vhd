@@ -9,9 +9,9 @@ end MUXaddpc;
 
 architecture MUXaddpc_arch of MUXaddpc is
     begin
-      if (ReslB = "1") then
-        sal <= ent2;
-      else 
-        sal <= ent1;
-      end if;
+      case EwalB is
+        when "1" => sal<=ent1;
+        when "0" => sal<=ent2;
+        when others => sal<=ent1;
+      end case; 
 end MUXaddpc_arch;
