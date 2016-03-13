@@ -7,4 +7,5 @@ end adderB;
 
 architecture adderB_arch of adderB is
 begin 
+	res1 <= STD_LOGIC_VECTOR (unsigned(pcadd) + unsigned(branchA));
 end adderB_arch;
