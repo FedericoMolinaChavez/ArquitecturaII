@@ -12,13 +12,15 @@ entity ALU is
 end ALU;
 
 architecture ALU_arch of ALU is
+signal lo: STD_LOGIC_VECTOR (31 downto 0);
+signal hi: STD_LOGIC_VECTOR (31 downto 0);
 begin
 	process (ALUop,entA,entB,res1)
 	begin
 
 		res1<=std_logic_vector(unsigned(entA) + unsigned(entB)) when Aluop="0010"else --suma
 		res1<=std_logic_vector(unsigned(entA) - unsigned(entB)) when Aluop="0110"else --resta
-
+		
 		
 	end process;
 
