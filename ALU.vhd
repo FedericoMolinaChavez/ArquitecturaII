@@ -20,7 +20,6 @@ begin
 resl <= resl_dummy;
 	process (ALUop,entA,entB,resl_dummy,zero,hi)
 	begin
-<<<<<<< HEAD
 			case Aluop is
 			when "0010" => 
 					resl_dummy <= entA+entB;
@@ -39,20 +38,6 @@ resl <= resl_dummy;
 				when others =>
 					zero <= '0';
 			end case;
-=======
-
-		res1<=std_logic_vector(unsigned(entA) + unsigned(entB)) when Aluop="0010"else --suma
-		res1<=std_logic_vector(unsigned(entA) - unsigned(entB)) when Aluop="0110"else --resta
-		
-		if (res1 = 0) then
-		zero <= '1'
-		else
-		zero <= '0'
-		end if;
-			
-		
-		
->>>>>>> origin/master
 	end process;
 
 end ALU_arch;
