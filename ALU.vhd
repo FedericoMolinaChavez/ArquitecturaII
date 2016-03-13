@@ -21,6 +21,13 @@ begin
 		res1<=std_logic_vector(unsigned(entA) + unsigned(entB)) when Aluop="0010"else --suma
 		res1<=std_logic_vector(unsigned(entA) - unsigned(entB)) when Aluop="0110"else --resta
 		
+		if (res1 = 0) then
+		zero <= '1'
+		else
+		zero <= '0'
+		end if;
+			
+		
 		
 	end process;
 
