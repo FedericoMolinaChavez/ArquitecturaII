@@ -5,7 +5,8 @@ entity MUXA is
   port(
     ent1: in STD_LOGIC_VECTOR (31 downto 0);
     ent2: in STD_LOGIC_VECTOR (31 downto 0);
-    AluSrc: in std_logic;
+    ent3: in STD_LOGIC_VECTOR (31 downto 0);
+    AluSrc: in STD_LOGIC_VECTOR (1 downto 0);
     sal: out STD_LOGIC_VECTOR (31 downto 0)
   );
 end MUXA;
@@ -17,8 +18,9 @@ begin
   process(AluSrc,ent1,ent2,sal_dummy) 
     begin
     case AluSrc is
-      when '1' => sal_dummy <= ent2;
-      when '0' => sal_dummy <= ent1;
+      when "01" => sal_dummy <= ent2;
+      when "00" => sal_dummy <= ent1;
+      when "10" => sal_dummy <= ent3
       when others => sal_dummy <= ent1;
     end case;
     end process;
