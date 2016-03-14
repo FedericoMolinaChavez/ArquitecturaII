@@ -3,8 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity signExtend is
 	port(
-		a: in STD_LOGIC_VECTOR(15 downto 0);
-		b: out STD_LOGIC_VECTOR(31 downto 0)
+		a: in STD_LOGIC_VECTOR(15 downto 0); --dato que llega del instruction memory
+		b: out STD_LOGIC_VECTOR(31 downto 0)--dato que sale con los bits agregados
 	);
 end signExtend;
 
