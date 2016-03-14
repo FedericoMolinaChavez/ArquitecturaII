@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity MUXaddpc is
   port(
-  ent1: in STD_LOGIC_VECTOR (31 downto 0);
-  ent2: in STD_LOGIC_VECTOR (31 downto 0);
+  ent1: in STD_LOGIC_VECTOR (31 downto 0); --pc normalito
+  ent2: in STD_LOGIC_VECTOR (31 downto 0); --branch
   ReslB: in std_logic;
   sal: out STD_LOGIC_VECTOR (31 downto 0)
   );
