@@ -3,11 +3,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MUXA is
   port(
-    ent1: in STD_LOGIC_VECTOR (31 downto 0);
-    ent2: in STD_LOGIC_VECTOR (31 downto 0);
-    ent3: in STD_LOGIC_VECTOR (31 downto 0);
+    ent1: in STD_LOGIC_VECTOR (31 downto 0); --entrada de register file
+    ent2: in STD_LOGIC_VECTOR (31 downto 0); --entrada de signextend
+    ent3: in STD_LOGIC_VECTOR (31 downto 0); --entrada de syscall
     AluSrc: in STD_LOGIC_VECTOR (1 downto 0);
-    sal: out STD_LOGIC_VECTOR (31 downto 0)
+    sal: out STD_LOGIC_VECTOR (31 downto 0) --salida hacia la ALU
   );
 end MUXA;
 
