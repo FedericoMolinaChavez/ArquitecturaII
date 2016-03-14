@@ -1,4 +1,4 @@
-entity adderB is
+entity adderB is -- se sobre-entienden
 	port(
 	pcadd: in STD_LOGIC_VECTOR (31 downto 0);
 	branchA: in STD_LOGIC_VECTOR (31 downto 0);
