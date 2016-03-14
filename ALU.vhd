@@ -6,10 +6,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity ALU is
 	port(
 	ALUop: in STD_LOGIC_VECTOR (2 downto 0);
-	entA: in STD_LOGIC_VECTOR (31 downto 0);
-	entB: in STD_LOGIC_VECTOR (31 downto 0);
-	resl: out STD_LOGIC_VECTOR (31 downto 0);
-	zero: buffer std_logic);
+	entA: in STD_LOGIC_VECTOR (31 downto 0); --registro a
+	entB: in STD_LOGIC_VECTOR (31 downto 0); --registro b
+	resl: out STD_LOGIC_VECTOR (31 downto 0); -- alu out
+	zero: buffer std_logic); -- valor de zero de la alu
 end ALU;
 
 architecture ALU_arch of ALU is
