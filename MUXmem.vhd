@@ -3,8 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MUXmem is
   port(
-  ent1: in STD_LOGIC_VECTOR (31 downto 0);
-  ent2: in STD_LOGIC_VECTOR (31 downto 0);
+  ent1: in STD_LOGIC_VECTOR (31 downto 0); --memoria a registro
+  ent2: in STD_LOGIC_VECTOR (31 downto 0); --alu a registro
   MemReg: in std_logic;
   sal: out STD_LOGIC_VECTOR (31 downto 0)
   );
