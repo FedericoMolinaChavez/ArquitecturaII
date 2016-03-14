@@ -4,11 +4,11 @@ use ieee.numeric_std.ALL;
 
 entity DataMemory is
 	port(
-	entA: in STD_LOGIC_VECTOR (31 downto 0);
-	entB: in STD_LOGIC_VECTOR (31 downto 0);
-	memWrite: in std_logic;
+	entA: in STD_LOGIC_VECTOR (31 downto 0); --adress
+	entB: in STD_LOGIC_VECTOR (31 downto 0); --write data
+	memWrite: in std_logic; 
 	memRead: in std_logic;
-	data: out STD_LOGIC_VECTOR (31 downto 0)
+	data: out STD_LOGIC_VECTOR (31 downto 0) --salida a mux
 	);
 end DataMemory;
 
