@@ -4,9 +4,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity MUXrf is
 	port(
 	RegDst: in std_logic;
-	ent1: in STD_LOGIC_VECTOR (4 downto 0);
-	ent2: in STD_LOGIC_VECTOR (4 downto 0);
-	sal: out STD_LOGIC_VECTOR (4 downto 0)
+	ent1: in STD_LOGIC_VECTOR (4 downto 0); --direccion de registro 
+	ent2: in STD_LOGIC_VECTOR (4 downto 0); --direccion de im
+	sal: out STD_LOGIC_VECTOR (4 downto 0) --a write register.
 	);
 end MUXrf;
 
