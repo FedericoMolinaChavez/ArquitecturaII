@@ -28,3 +28,4 @@ begin
 			regb<= registerfiles(to_integer(unsigned(rt)));
 		end if;
 	end process;
+end registerFile_arch;
