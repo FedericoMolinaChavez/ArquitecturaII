@@ -27,10 +27,12 @@ resl <= resl_dummy;
 			when "0110" =>
 					resl_dummy <= entA-entB;
 			when "1110" =>
-					resl_dummy <= std_logic_vector(division(unsigned(entA),unsigned(entB));
+					resl_dummy <= std_logic_vector(division(unsigned(entA),unsigned(entB)));
 			when "0111" =>
 					resl_dummy <= entA-entB;
 			when "1111" =>
+					resl_dummy <= hi;
+			when others =>
 					resl_dummy <= hi;
 			end case;
 			case resl_dummy is
