@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity pruebaHpta is
+entity uc is
 	port(
 	Reset: in std_logic;
 	clk: in std_logic;
@@ -9,9 +9,9 @@ entity pruebaHpta is
 	funct: in STD_LOGIC_VECTOR (5 downto 0);
 	but: in std_logic;
 	datapath: out STD_LOGIC_VECTOR(18 downto 0));
-end pruebaHpta;
+end uc;
 
-architecture CU_arch of pruebaHpta is
+architecture CU_arch of uc is
 type STATE_TYPE is (st_Reset,st_1,st_2,st_3,st_4,st_5,st_6,st_7,st_8,st_9,st_10,st_11,st_12);
 signal state: state_type;
 
