@@ -2,10 +2,11 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use work.divisionp.ALL;
 
 entity ALU is
 	port(
-	ALUop: in STD_LOGIC_VECTOR (2 downto 0);
+	ALUop: in STD_LOGIC_VECTOR (3 downto 0);
 	entA: in STD_LOGIC_VECTOR (31 downto 0); --registro a
 	entB: in STD_LOGIC_VECTOR (31 downto 0); --registro b
 	resl: out STD_LOGIC_VECTOR (31 downto 0); -- alu out
@@ -26,7 +27,7 @@ resl <= resl_dummy;
 			when "0110" =>
 					resl_dummy <= entA-entB;
 			when "1110" =>
-				hi <= std_logic_vector(to_signed(to_integer(signed(entA) / signed(entB)),32));
+					resl_dummy <= std_logic_vector(division(unsigned(entA),unsigned(entB));
 			when "0111" =>
 					resl_dummy <= entA-entB;
 			when "1111" =>
@@ -41,5 +42,3 @@ resl <= resl_dummy;
 	end process;
 
 end ALU_arch;
-
-
