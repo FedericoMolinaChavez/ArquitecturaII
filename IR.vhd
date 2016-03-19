@@ -9,5 +9,6 @@ entity IR is
 end IR;
 
 architecture IR_arch of IR is
+begin
   salida <= entrada;
 end IR_arch;
