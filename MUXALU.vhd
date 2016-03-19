@@ -6,6 +6,7 @@ entity MUXA is
     ent1: in STD_LOGIC_VECTOR (31 downto 0); --entrada de register file
     ent2: in STD_LOGIC_VECTOR (31 downto 0); --entrada de signextend
     ent3: in STD_LOGIC_VECTOR (31 downto 0); --entrada de syscall
+    ent4: in std_logic_vector (31 downto 0);
     AluSrc: in STD_LOGIC_VECTOR (1 downto 0);
     sal: out STD_LOGIC_VECTOR (31 downto 0) --salida hacia la ALU
   );
@@ -20,7 +21,8 @@ begin
     case AluSrc is
       when "01" => sal_dummy <= ent2;
       when "00" => sal_dummy <= ent1;
-      when "10" => sal_dummy <= ent3
+      when "10" => sal_dummy <= ent3;
+      when "11" => sal_dummy <= ent4
       when others => sal_dummy <= ent1;
     end case;
     end process;
