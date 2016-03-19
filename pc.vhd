@@ -15,9 +15,14 @@ begin
 	process(clk, reset)	
 	begin
 		if (rising_edge(clk)) then
-			sal <= ent;
-		elsif (reset == 1) then
+			if(reset = '1') then
 			sal <= "00000000000000000000000000000000";
+			else
+			end if;
+			if (pcwrite = '1') then
+			sal <= ent;
+			else
+			end if;
 		else
 		end if;
 end process;
