@@ -8,14 +8,14 @@ entity uc is
 	op: in STD_LOGIC_VECTOR (5 downto 0);
 	funct: in STD_LOGIC_VECTOR (5 downto 0);
 	but: in std_logic;
-	datapath: out STD_LOGIC_VECTOR(18 downto 0));
+	datapath: out STD_LOGIC_VECTOR(19 downto 0));
 end uc;
 
 architecture CU_arch of uc is
 type STATE_TYPE is (st_Reset,st_1,st_2,st_3,st_4,st_5,st_6,st_7,st_8,st_9,st_10,st_11,st_12);
 signal state: state_type;
 
-signal datapath_dummy: STD_LOGIC_VECTOR(18 downto 0);
+signal datapath_dummy: STD_LOGIC_VECTOR(19 downto 0);
 begin
 	datapath<=datapath_dummy;
 	process(Reset,clk)
@@ -82,35 +82,35 @@ begin
 			begin
 				case state is
 					when st_Reset =>
-						datapath_dummy <= "0000000000000000000";
+						datapath_dummy <= "00000000000000000000";
 					when st_1 =>
-						datapath_dummy <= "0000010000100100000";
+						datapath_dummy <= "00000100000100100000";
 					when st_2 =>
-						datapath_dummy <= "0000110000000000000";
+						datapath_dummy <= "00001100000000000000";
 					when st_3 =>
-						datapath_dummy <= "0101000000000000000";
+						datapath_dummy <= "01010000000000000000";
 					when st_4 =>
-						datapath_dummy <= "0000000101000000000";
+						datapath_dummy <= "00000001001000000000";
 					when st_5 =>
-						datapath_dummy <= "0101000000000010100";
+						datapath_dummy <= "01010000000000010100";
 					when st_6 =>
-						datapath_dummy <= "0011000000000001010";
+						datapath_dummy <= "00110000000000001010";
 					when st_7 =>
-						datapath_dummy <= "1000100000000000000";
+						datapath_dummy <= "10001000000000000000";
 					when st_8 =>
-						datapath_dummy <= "0000000011000000000";
+						datapath_dummy <= "00000000011000000000";
 					when st_9 =>
-						datapath_dummy <= "0000001100000000000"; 
+						datapath_dummy <= "00000011000000000000"; 
 					when st_10 =>
-						datapath_dummy <= "1100000000000000000";
+						datapath_dummy <= "11000000000000000000";
 					when st_11 =>
-						datapath_dummy <= "0000000000000000001";
+						datapath_dummy <= "00000000000000000001";
 					when st_12 =>
-						datapath_dummy <= "0000000101000010100";
+						datapath_dummy <= "00000001001000010100";
 						
 						
 					when others =>
-						datapath_dummy <= "0000000000000000000";
+						datapath_dummy <= "00000000000000000000";
 				end case;
 			end process;
 	
