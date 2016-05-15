@@ -1,24 +1,25 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
-entity MUXrf is
-	port(
-	RegDst: in std_logic;
-	ent1: in STD_LOGIC_VECTOR (4 downto 0); --direccion de registro 
-	ent2: in STD_LOGIC_VECTOR (4 downto 0); --direccion de im
-	sal: out STD_LOGIC_VECTOR (4 downto 0) --a write register.
-	);
-end MUXrf;
+entity MUXaddpc is
+  port(
+  ent1: in STD_LOGIC_VECTOR (7 downto 0); --entrada uno
+  ent2: in STD_LOGIC_VECTOR (7 downto 0); --entrada dos
+  ReslB: in std_logic;
+  sal: out STD_LOGIC_VECTOR (7 downto 0)
+  );
+end MUXaddpc;
 
-architecture MUXrf_arch of MUXrf is
-signal sal_dummy: STD_LOGIC_VECTOR (4 downto 0);
-begin
-	sal<=sal_dummy;
-		process(RegDst,ent1,ent2,sal_dummy)
-		begin
-			case RegDst is
-				when '1' => sal_dummy<=ent2;
-				when '0' => sal_dummy<=ent1;
-			end case;
-		end process;
-end MUXrf_arch;
+architecture MUXaddpc_arch of MUXaddpc is
+  signal sal_dummy : STD_LOGIC_VECTOR(7 downto 0);
+    begin
+    sal <= sal_dummy;
+    process(ent1,ent2,ReslB,sal_dummy)
+    begin
+      case ReslB is
+        when '1' => sal_dummy<=ent1; 
+        when '0' => sal_dummy<=ent2;
+        when others => sal_dummy<=ent1;
+      end case; 
+    end process;
+end MUXaddpc_arch;
